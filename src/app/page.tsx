@@ -50,35 +50,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
-        <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
-          <div>
-            <p className="text-xs font-medium uppercase tracking-[0.22em] text-subtle">
-              {home.workshopKicker}
-            </p>
-            <h2 className="mt-3 font-display text-4xl tracking-tight sm:text-5xl">
-              {home.workshopTitle}
-            </h2>
-          </div>
-          <p className="text-base leading-relaxed text-muted sm:text-lg">
-            {home.workshopBody}
-          </p>
-        </div>
-        <LeadLine className="my-12" />
-        <dl className="grid grid-cols-2 gap-8 sm:grid-cols-3">
-          {home.stats.map((stat) => (
-            <div key={stat.label}>
-              <dt className="text-xs uppercase tracking-[0.16em] text-subtle">
-                {stat.label}
-              </dt>
-              <dd className="mt-2 font-display text-2xl tracking-tight sm:text-3xl">
-                {stat.value}
-              </dd>
-            </div>
-          ))}
-        </dl>
-      </section>
-
       <section className="bg-elevated py-20 sm:py-28">
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
           <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
