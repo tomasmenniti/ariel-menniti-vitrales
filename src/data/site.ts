@@ -17,7 +17,7 @@ export const site = {
 
 export const copy = {
   home: {
-    tagline: "La luz, cortada a mano.",
+    tagline: "Diseño, creación y restauración",
     intro:
       "Vitrales para casas, capillas y espacios que merecen una luz propia. Corte, emplomado y soldadura en el taller, como se hace desde hace siglos.",
     ctaWorks: "Ver obras",
