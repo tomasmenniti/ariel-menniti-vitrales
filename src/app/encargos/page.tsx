@@ -9,14 +9,17 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { commissionTypes, copy, gmailHref, site } from "@/data/site";
 import { cn } from "@/lib/utils";
+import styles from "./styles.module.css";
 
 export default function EncargosPage() {
   const page = copy.encargos;
   const [sent, setSent] = useState(false);
-  const [kind, setKind] = useState<(typeof commissionTypes)[number]>("Ventana");
+  const [kind, setKind] =
+    useState<(typeof commissionTypes)[number]>("Ventana");
 
   function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
+
     const data = new FormData(e.currentTarget);
     const name = String(data.get("name") ?? "").trim();
     const email = String(data.get("email") ?? "").trim();
@@ -41,38 +44,36 @@ export default function EncargosPage() {
       "_blank",
       "noopener,noreferrer",
     );
+
     setSent(true);
   }
 
   return (
-    <main className="pt-24 sm:pt-28">
-      <div className="mx-auto grid max-w-6xl gap-14 px-5 pb-24 sm:px-8 lg:grid-cols-[1fr_1.05fr] lg:gap-20">
-        <header>
-          <p className="text-xs font-medium uppercase tracking-[0.22em] text-subtle">
-            {page.kicker}
-          </p>
-          <h1 className="mt-3 font-display text-5xl tracking-tight sm:text-6xl">
-            {page.title}
-          </h1>
-          <p className="mt-5 text-base leading-relaxed text-muted sm:text-lg">
-            {page.body}
-          </p>
-          <ContactLinks className="mt-8" />
+    <main className={styles.page}>
+      <div className={styles.container}>
+        <header className={styles.header}>
+          <p className={styles.kicker}>{page.kicker}</p>
+
+          <h1 className={styles.title}>{page.title}</h1>
+
+          <p className={styles.body}>{page.body}</p>
+
+          <ContactLinks className={styles.contactLinks} />
         </header>
 
-        <div className="rounded-2xl bg-elevated p-5 shadow-[var(--shadow-border)] sm:p-8">
+        <div className={styles.formCard}>
           {sent ? (
-            <div className="flex min-h-80 flex-col items-center justify-center text-center">
-              <span className="inline-flex size-12 items-center justify-center rounded-full bg-surface text-came">
+            <div className={styles.sentState}>
+              <span className={styles.sentIcon}>
                 <Check className="size-5" />
               </span>
-              <h2 className="mt-5 font-display text-3xl tracking-tight">
-                {page.sentTitle}
-              </h2>
-              <p className="mt-3 max-w-sm text-muted">
+
+              <h2 className={styles.sentTitle}>{page.sentTitle}</h2>
+
+              <p className={styles.sentBody}>
                 {page.sentBody}{" "}
                 <a
-                  className="text-fg underline-offset-4 hover:underline"
+                  className={styles.emailLink}
                   href={gmailHref()}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -81,16 +82,27 @@ export default function EncargosPage() {
                 </a>
                 .
               </p>
-              <Button className="mt-8" variant="outline" onClick={() => setSent(false)}>
+
+              <Button
+                className={styles.sentAgainButton}
+                variant="outline"
+                onClick={() => setSent(false)}
+              >
                 {page.sentAgain}
               </Button>
             </div>
           ) : (
-            <form className="space-y-5" onSubmit={onSubmit}>
+            <form className={styles.form} onSubmit={onSubmit}>
               <Field label="Nombre" htmlFor="name">
-                <Input id="name" name="name" required autoComplete="name" />
+                <Input
+                  id="name"
+                  name="name"
+                  required
+                  autoComplete="name"
+                />
               </Field>
-              <div className="grid gap-5 sm:grid-cols-2">
+
+              <div className={styles.contactFields}>
                 <Field label="Email" htmlFor="email">
                   <Input
                     id="email"
@@ -100,25 +112,33 @@ export default function EncargosPage() {
                     autoComplete="email"
                   />
                 </Field>
+
                 <Field label="Teléfono" htmlFor="phone">
-                  <Input id="phone" name="phone" type="tel" autoComplete="tel" />
+                  <Input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    autoComplete="tel"
+                  />
                 </Field>
               </div>
-              <fieldset>
-                <legend className="text-xs font-medium uppercase tracking-[0.16em] text-muted">
+
+              <fieldset className={styles.typeFieldset}>
+                <legend className={styles.typeLegend}>
                   Tipo de pieza
                 </legend>
-                <div className="mt-3 flex flex-wrap gap-2">
+
+                <div className={styles.typeOptions}>
                   {commissionTypes.map((type) => (
                     <button
                       key={type}
                       type="button"
                       onClick={() => setKind(type)}
                       className={cn(
-                        "h-10 rounded-md px-3.5 text-sm transition-colors duration-150",
+                        styles.typeButton,
                         kind === type
-                          ? "bg-fg text-bg"
-                          : "bg-surface text-muted hover:text-fg",
+                          ? styles.typeButtonActive
+                          : styles.typeButtonInactive,
                       )}
                     >
                       {type}
@@ -126,9 +146,15 @@ export default function EncargosPage() {
                   ))}
                 </div>
               </fieldset>
+
               <Field label="Ciudad o lugar de la obra" htmlFor="place">
-                <Input id="place" name="place" placeholder="Casa, capilla, patio…" />
+                <Input
+                  id="place"
+                  name="place"
+                  placeholder="Casa, capilla, patio…"
+                />
               </Field>
+
               <Field label="Contame la idea" htmlFor="message">
                 <Textarea
                   id="message"
@@ -137,7 +163,12 @@ export default function EncargosPage() {
                   placeholder="Medidas del vano, estilo, colores, si hay fotos…"
                 />
               </Field>
-              <Button type="submit" size="lg" className="w-full">
+
+              <Button
+                type="submit"
+                size="lg"
+                className={styles.submitButton}
+              >
                 <Mail className="size-4" />
                 Enviar por Gmail
               </Button>
@@ -159,7 +190,7 @@ function Field({
   children: ReactNode;
 }) {
   return (
-    <div className="space-y-2">
+    <div className={styles.field}>
       <Label htmlFor={htmlFor}>{label}</Label>
       {children}
     </div>

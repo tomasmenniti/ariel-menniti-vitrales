@@ -75,7 +75,6 @@ export const works: Work[] = [
     technique: "Vidrio emplomado sobre madera",
     image: "/obras/7.png",
     span: "wide",
-    featured: true,
   },
 ];
 
