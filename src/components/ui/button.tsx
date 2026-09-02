@@ -32,7 +32,7 @@ const buttonVariants = cva(
 
 export function Button({
   className,
-  variant,
+  variant,  
   size,
   asChild = false,
   ...props
