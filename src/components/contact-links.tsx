@@ -1,7 +1,7 @@
 import { Mail } from "lucide-react";
 import { copy, gmailHref, site, whatsappHref } from "@/utils/data/site";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+import { cn } from "../utils/functions";
 
 function WhatsAppIcon({ className }: { className?: string }) {
   return (

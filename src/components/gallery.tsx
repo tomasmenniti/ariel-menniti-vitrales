@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import type { Work } from "@/utils/data/works";
-import { cn } from "@/lib/utils";
+import { cn } from "../utils/functions";
 import Image from "next/image";
 
 export function Gallery({

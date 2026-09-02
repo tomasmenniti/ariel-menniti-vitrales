@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { LeadLine } from "@/components/lead-line";
 import { Button } from "@/components/ui/button";
-import { StoreGallery } from "../../components/Tienda/tienda";
+import { StoreGallery } from "../../components/Tienda/Tienda";
 import { copy } from "@/utils/data/site";
 import { processSteps } from "@/utils/data/works";
 import styles from "./styles.module.css";

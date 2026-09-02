@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import * as Dialog from "@radix-ui/react-dialog";
 import { Menu, X } from "lucide-react";
 import { nav, site } from "@/utils/data/site";
-import { cn } from "@/lib/utils";
+import { cn } from "../utils/functions";
 import { Mark } from "@/components/mark";
 import { Button } from "@/components/ui/button";
 
