@@ -50,22 +50,18 @@ export const copy = {
     title: "Algunas de mis obras",
     body: "Rosetones, puertas, ventanas y techos. Cada encargo se fabrica con amor al arte. Estas piezas muestran el registro del taller.",
   },
-  oficio: {
-    kicker: "El oficio",
-    title: "El vidrio no se pinta de luz. La contiene.",
-    lead: "Un taller de vitral emplomado: corte, plomo, estaño y masilla. Piezas nuevas y restauración de ventanas antiguas.",
-    corteCaption:
-      "El corte se hace a mano, vidrio por vidrio, sobre el cartón a tamaño real.",
-    emplomadoCaption:
-      "El plomo dibuja y sostiene. Cada junta se suelda y se masilla.",
+  tienda: {
+    kicker: "Tienda",
+    title: "Algunas de mis obras disponibles",
+    lead: "Estas obras actualmente están listas para que te las lleves.",
     essayTitle: "Un trabajo lento a propósito.",
     paragraphs: [
       "El vitral no es un dibujo pegado al cristal. Es un muro de luz: cientos de fragmentos que solo existen juntos. Por eso el taller sigue el método clásico — el mismo que se usa en capillas y casas antiguas — y no atajos de film o impresión.",
       "Se elige el vidrio por cómo deja pasar el sol, no solo por el color en la mesa. Un catedral de cobalto a las diez de la mañana no es el mismo a las cinco. Esa es la parte que no se puede apurar.",
       "También se restauran piezas: plomos cansados, vidrios rotos, ventanas que alguien más hizo hace décadas. El respeto es el mismo. Se repara lo que se puede y se documenta lo que se cambia.",
     ],
-    pathTitle: "El camino de una pieza",
-    pathCta: "Hablar de un encargo",
+    pathTitle: "El proceso de un encargo",
+    pathCta: "Consultar",
   },
   encargos: {
     kicker: "Encargos",
@@ -88,7 +84,7 @@ export const copy = {
 export const nav = [
   { to: "/", label: "Inicio" },
   { to: "/obras", label: "Obras" },
-  { to: "/oficio", label: "El oficio" },
+  { to: "/tienda", label: "Tienda" },
   { to: "/encargos", label: "Encargos" },
 ] as const;
 

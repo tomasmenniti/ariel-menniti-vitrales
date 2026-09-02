@@ -94,7 +94,7 @@ export default function Home() {
         </ol>
         <div className="mt-8">
           <Button asChild variant="link" className="px-0">
-            <Link href="/oficio">
+            <Link href="/tienda">
               {home.processLink}
               <ArrowRight className="size-4" />
             </Link>
