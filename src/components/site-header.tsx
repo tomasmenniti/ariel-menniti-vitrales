@@ -69,14 +69,12 @@ export function SiteHeader() {
               </Link>
             );
           })}
-          <Button asChild size="sm">
-            <button
-              onClick={() => router.push("/encargos")}
-              className="tu-clase-css"
-            >
-              Encargar
-            </button>
-          </Button>
+          <button
+            onClick={() => router.push("/encargos")}
+            className="tu-clase-css"
+          >
+            Encargar
+          </button>
         </nav>
 
         <Dialog.Root open={open} onOpenChange={setOpen}>
@@ -122,14 +120,12 @@ export function SiteHeader() {
                   </Link>
                 ))}
               </nav>
-              <Button asChild className="mt-8" size="lg">
-                <button
-                  onClick={() => router.push("/encargos")}
-                  className="tu-clase-css"
-                >
-                  Encargar una pieza
-                </button>
-              </Button>
+              <button
+                onClick={() => router.push("/encargos")}
+                className="tu-clase-css"
+              >
+                Encargar una pieza
+              </button>
             </Dialog.Content>
           </Dialog.Portal>
         </Dialog.Root>
