@@ -1,5 +1,5 @@
-import portrait from '../assets/ariel.jpg';
-import obra8 from '../assets/images/obras/8.png';
+import portrait from '../../assets/ariel.jpg';
+import obra8 from '../../assets/images/obras/8.png';
 
 export const site = {
   name: "Ariel Menniti",

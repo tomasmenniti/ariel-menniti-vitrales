@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ContactLinks } from "@/components/contact-links";
 import { LeadLine } from "@/components/lead-line";
 import { Mark } from "@/components/mark";
-import { copy, nav, site } from "@/data/site";
+import { copy, nav, site } from "@/utils/data/site";
 
 export function SiteFooter() {
   return (

@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { copy, whatsappHref } from "@/data/site";
+import { copy, whatsappHref } from "@/utils/data/site";
 import Image from "next/image";
 
 // Icono de WhatsApp extraído de tu código

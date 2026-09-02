@@ -1,11 +1,11 @@
 import { StaticImageData } from 'next/image';
-import obra1 from '../assets/images/obras/1.png';
-import obra2 from '../assets/images/obras/2.png';
-import obra3 from '../assets/images/obras/3.png';
-import obra4 from '../assets/images/obras/4.png';
-import obra5 from '../assets/images/obras/5.png';
-import obra6 from '../assets/images/obras/6.png';
-import obra7 from '../assets/images/obras/7.png';
+import obra1 from '../../assets/images/obras/1.png';
+import obra2 from '../../assets/images/obras/2.png';
+import obra3 from '../../assets/images/obras/3.png';
+import obra4 from '../../assets/images/obras/4.png';
+import obra5 from '../../assets/images/obras/5.png';
+import obra6 from '../../assets/images/obras/6.png';
+import obra7 from '../../assets/images/obras/7.png';
 
 export type Work = {
   id: string;

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { SiteShell } from "@/components/site-shell";
-import { site, copy } from "@/data/site";
+import { site, copy } from "@/utils/data/site";
 import "./globals.css";
 
 export const metadata: Metadata = {

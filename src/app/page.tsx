@@ -3,8 +3,8 @@ import { ArrowRight } from "lucide-react";
 import { ContactLinks } from "@/components/contact-links";
 import { Gallery } from "@/components/gallery";
 import { Button } from "@/components/ui/button";
-import { copy, site } from "@/data/site";
-import { processSteps, works } from "@/data/works";
+import { copy, site } from "@/utils/data/site";
+import { processSteps, works } from "@/utils/data/works";
 import styles from "./styles.module.css"; // ajusta la ruta si hace falta
 import Image from "next/image";
 

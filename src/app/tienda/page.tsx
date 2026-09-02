@@ -3,8 +3,8 @@ import Link from "next/link";
 import { LeadLine } from "@/components/lead-line";
 import { Button } from "@/components/ui/button";
 import { StoreGallery } from "@/components/tienda";
-import { copy } from "@/data/site";
-import { processSteps } from "@/data/works";
+import { copy } from "@/utils/data/site";
+import { processSteps } from "@/utils/data/works";
 import styles from "./styles.module.css";
 
 export const metadata: Metadata = {

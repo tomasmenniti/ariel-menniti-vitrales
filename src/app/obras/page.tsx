@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Gallery } from "@/components/gallery";
-import { copy } from "@/data/site";
-import { works } from "@/data/works";
+import { copy } from "@/utils/data/site";
+import { works } from "@/utils/data/works";
 import styles from "./styles.module.css";
 
 export const metadata: Metadata = {
