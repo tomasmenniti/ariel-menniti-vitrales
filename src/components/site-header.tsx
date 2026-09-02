@@ -69,12 +69,9 @@ export function SiteHeader() {
               </Link>
             );
           })}
-          <button
-            onClick={() => router.push("/encargos")}
-            className="tu-clase-css"
-          >
-            Encargar
-          </button>
+          <Button asChild variant="outline">
+            <Link href="/encargos">Encargar</Link>
+          </Button>
         </nav>
 
         <Dialog.Root open={open} onOpenChange={setOpen}>
@@ -120,12 +117,9 @@ export function SiteHeader() {
                   </Link>
                 ))}
               </nav>
-              <button
-                onClick={() => router.push("/encargos")}
-                className="tu-clase-css"
-              >
-                Encargar una pieza
-              </button>
+              <Button asChild variant="outline">
+                <Link href="/encargos">Encargar una pieza</Link>
+              </Button>
             </Dialog.Content>
           </Dialog.Portal>
         </Dialog.Root>

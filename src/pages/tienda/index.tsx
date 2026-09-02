@@ -46,13 +46,9 @@ export default function TiendaPage() {
             </li>
           ))}
         </ol>
-
-        <button
-          onClick={() => router.push("/encargos")}
-          className="tu-clase-css"
-        >
-          {page.pathCta}
-        </button>
+        <Button asChild variant="outline">
+          <Link href="/encargos">{page.pathCta}</Link>
+        </Button>
       </section>
     </main>
   );
