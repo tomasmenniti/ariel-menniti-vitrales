@@ -6,12 +6,14 @@ import { StoreGallery } from "../../components/Tienda/Tienda";
 import { copy } from "@/utils/data/site";
 import { processSteps } from "@/utils/data/works";
 import styles from "./styles.module.css";
+import { useRouter } from "next/router";
 
 export const metadata: Metadata = {
   title: "Tienda",
 };
 
 export default function TiendaPage() {
+  const router = useRouter();
   const page = copy.tienda;
 
   return (
@@ -45,9 +47,12 @@ export default function TiendaPage() {
           ))}
         </ol>
 
-        <Button asChild className={styles.pathCta} size="lg">
-          <Link href="/encargos">{page.pathCta}</Link>
-        </Button>
+        <button
+          onClick={() => router.push("/encargos")}
+          className="tu-clase-css"
+        >
+          {page.pathCta}
+        </button>
       </section>
     </main>
   );

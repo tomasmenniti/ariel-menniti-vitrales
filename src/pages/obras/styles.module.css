@@ -1,0 +1,80 @@
+.page {
+  padding-top: 6rem;
+}
+
+@media (min-width: 640px) {
+  .page {
+    padding-top: 7rem;
+  }
+}
+
+.header {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 72rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-bottom: 3rem;
+}
+
+@media (min-width: 640px) {
+  .header {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.kicker {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--color-subtle, var(--subtle));
+}
+
+.title {
+  margin-top: 0.75rem;
+  font-family: var(--font-display);
+  font-size: 3rem;
+  line-height: 1;
+  letter-spacing: -0.025em;
+}
+
+@media (min-width: 640px) {
+  .title {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+}
+
+.body {
+  margin-top: 1.25rem;
+  max-width: 42rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--color-muted, var(--muted));
+}
+
+@media (min-width: 640px) {
+  .body {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
+.galleryContainer {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 72rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-bottom: 6rem;
+}
+
+@media (min-width: 640px) {
+  .galleryContainer {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}

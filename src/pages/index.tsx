@@ -7,9 +7,11 @@ import { copy, site } from "@/utils/data/site";
 import { processSteps, works } from "@/utils/data/works";
 import styles from "./styles.module.css"; // ajusta la ruta si hace falta
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 export default function Home() {
   const home = copy.home;
+  const router = useRouter();
 
   return (
     <main>
@@ -30,13 +32,30 @@ export default function Home() {
             <ContactLinks size="lg" className={styles.contactLinks} />
             <div className={styles.ctaButtons}>
               <Button asChild variant="outline" size="lg">
-                <Link href="/obras">
+                <button
+                  onClick={() => router.push("/obras")}
+                  className="tu-clase-css"
+                >
+                  Obras
+                </button>
+                {/* <Link href="/obras">
                   {home.ctaWorks}
                   <ArrowRight className="size-4" />
-                </Link>
+                </Link> TODO */}
+                <button
+                  onClick={() => router.push("/obras")}
+                  className="tu-clase-css"
+                >
+                  {home.ctaWorks}
+                </button>
               </Button>
               <Button asChild variant="ghost" size="lg">
-                <Link href="/encargos">{home.ctaCommission}</Link>
+                <button
+                  onClick={() => router.push("/encargos")}
+                  className="tu-clase-css"
+                >
+                  {home.ctaCommission}
+                </button>
               </Button>
             </div>
           </div>
@@ -51,10 +70,16 @@ export default function Home() {
               <h2 className={styles.galleryTitle}>{home.galleryTitle}</h2>
             </div>
             <Button asChild variant="outline">
-              <Link href="/obras">
+              {/* <Link href="/obras">
                 {home.galleryCta}
                 <ArrowRight className="size-4" />
-              </Link>
+              </Link> TODO */}
+              <button
+                onClick={() => router.push("/obras")}
+                className="tu-clase-css"
+              >
+                {home.galleryCta}
+              </button>
             </Button>
           </div>
           <Gallery works={works} featuredOnly />
@@ -75,10 +100,16 @@ export default function Home() {
         </ol>
         <div className={styles.processLinkWrap}>
           <Button asChild variant="link" className={styles.processLinkButton}>
-            <Link href="/tienda">
+            {/* <Link href="/tienda">
               {home.processLink}
               <ArrowRight className="size-4" />
-            </Link>
+            </Link> TODO */}
+            <button
+                onClick={() => router.push("/tienda")}
+                className="tu-clase-css"
+              >
+                {home.processLink}
+              </button>
           </Button>
         </div>
       </section>
@@ -97,9 +128,12 @@ export default function Home() {
             <h2 className={styles.ctaTitle}>{home.ctaTitle}</h2>
             <p className={styles.ctaBody}>{home.ctaBody}</p>
             <div className={styles.ctaActions}>
-              <Button asChild size="lg">
-                <Link href="/encargos">{home.ctaButton}</Link>
-              </Button>
+              <button
+                onClick={() => router.push("encargos")}
+                className="tu-clase-css"
+              >
+                {home.ctaButton}
+              </button>
               <ContactLinks size="md" />
             </div>
           </div>

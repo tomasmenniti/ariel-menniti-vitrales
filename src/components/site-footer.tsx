@@ -3,8 +3,11 @@ import { ContactLinks } from "@/components/contact-links";
 import { LeadLine } from "@/components/lead-line";
 import { Mark } from "@/components/mark";
 import { copy, nav, site } from "@/utils/data/site";
+import { useRouter } from "next/router";
 
 export function SiteFooter() {
+  const router = useRouter();
+  
   return (
     <footer className="mt-auto bg-bg">
       <LeadLine />
@@ -26,9 +29,12 @@ export function SiteFooter() {
           <ul className="mt-4 space-y-2 text-sm text-muted">
             {nav.map((item) => (
               <li key={item.to}>
-                <Link href={item.to} className="hover:text-fg">
+                <button
+                  onClick={() => router.push(item.to)}
+                  className="tu-clase-css"
+                >
                   {item.label}
-                </Link>
+                </button>
               </li>
             ))}
           </ul>
