@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { copy, site } from "@/data/site";
 import { processSteps, works } from "@/data/works";
 import styles from "./styles.module.css"; // ajusta la ruta si hace falta
+import Image from "next/image";
 
 export default function Home() {
   const home = copy.home;
@@ -15,7 +16,7 @@ export default function Home() {
       <section className={styles.heroSection}>
         <div className={styles.heroContainer}>
           <figure className={styles.heroFigure}>
-            <img
+            <Image
               src={site.portrait}
               alt={site.portraitAlt}
               className={styles.heroImage}
@@ -85,7 +86,7 @@ export default function Home() {
       <section className={styles.ctaSection}>
         <div className={styles.ctaContainer}>
           <figure className={styles.ctaFigure}>
-            <img
+            <Image
               src={home.ctaImage}
               alt={home.ctaImageAlt}
               className={styles.ctaImage}

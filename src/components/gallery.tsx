@@ -5,6 +5,7 @@ import * as Dialog from "@radix-ui/react-dialog";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import type { Work } from "@/data/works";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 export function Gallery({
   works,
@@ -48,7 +49,7 @@ export function Gallery({
               onClick={() => setActive(index)}
               className="group flex h-full w-full flex-col overflow-hidden rounded-xl bg-elevated text-left shadow-[var(--shadow-border)]"
             >
-              <img
+              <Image
                 src={work.image}
                 alt={work.title}
                 className={cn(
@@ -83,7 +84,7 @@ export function Gallery({
             {current ? (
               <>
                 <div className="relative min-h-0 flex-1 bg-bg">
-                  <img
+                  <Image
                     src={current.image}
                     alt={current.title}
                     className="h-full w-full object-contain"

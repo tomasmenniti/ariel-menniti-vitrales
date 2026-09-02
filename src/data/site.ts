@@ -1,8 +1,6 @@
-/**
- * Textos y datos del sitio.
- * Editá este archivo para cambiar nombres, frases, botones y enlaces
- * sin tocar las imágenes.
- */
+import portrait from '../assets/ariel.jpg';
+import obra8 from '../assets/images/obras/8.png';
+
 export const site = {
   name: "Ariel Menniti",
   kicker: "Vitrales",
@@ -11,7 +9,7 @@ export const site = {
   whatsapp: "5491144120867",
   whatsappMessage: "Hola Ariel, te quiero consultar por tu trabajo",
   instagram: "https://www.instagram.com/arielmenniti_vitrales",
-  portrait: "/taller/ariel.jpg",
+  portrait,
   portraitAlt: "Ariel Menniti frente a un vitral, con el pulgar arriba",
 };
 
@@ -42,7 +40,7 @@ export const copy = {
     ctaBody:
       "Ventanas, puertas, lámparas y restauraciones. Se responde con tiempos, presupuesto y un boceto antes de cortar el primer vidrio.",
     ctaButton: "Pedir un presupuesto",
-    ctaImage: "/obras/8.png",
+    ctaImage: obra8,
     ctaImageAlt: "Puerta de vitral en un patio iluminado por la tarde",
   },
   obras: {

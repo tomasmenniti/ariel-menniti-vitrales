@@ -1,10 +1,14 @@
 "use client";
 
+import taller1 from '../assets/images/taller/t1.png';
+import taller2 from '../assets/images/taller/t2.png';
+
 import { useEffect, useState } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { copy, whatsappHref } from "@/data/site";
+import Image from "next/image";
 
 // Icono de WhatsApp extraído de tu código
 function WhatsAppIcon({ className }: { className?: string }) {
@@ -23,14 +27,14 @@ function WhatsAppIcon({ className }: { className?: string }) {
 const storeItems = [
   {
     id: "1",
-    image: "/taller/t1.png",
+    image: taller1,
     alt: "Manos cortando vidrio de color sobre el banco de trabajo",
     title: "Indio Solari | Ventana circular",
     price: "$15.000.000",
   },
   {
     id: "2",
-    image: "/taller/t2.png",
+    image: taller2,
     alt: "Panel de vitral en proceso de emplomado sobre el banco",
     title: "Virgen de Lourdes | Ventana circular",
     price: "$12.500.000",
@@ -67,7 +71,7 @@ export function StoreGallery() {
               className="group flex h-full w-full flex-col text-left"
             >
               <div className="overflow-hidden">
-                <img
+                <Image
                   src={item.image}
                   alt={item.alt}
                   className="aspect-[3/2] w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
@@ -96,7 +100,7 @@ export function StoreGallery() {
             {current ? (
               <>
                 <div className="relative min-h-0 flex-1 bg-bg">
-                  <img
+                  <Image
                     src={current.image}
                     alt={current.alt}
                     className="h-full w-full object-contain"

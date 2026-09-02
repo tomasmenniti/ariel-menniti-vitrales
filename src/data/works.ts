@@ -1,10 +1,19 @@
+import { StaticImageData } from 'next/image';
+import obra1 from '../assets/images/obras/1.png';
+import obra2 from '../assets/images/obras/2.png';
+import obra3 from '../assets/images/obras/3.png';
+import obra4 from '../assets/images/obras/4.png';
+import obra5 from '../assets/images/obras/5.png';
+import obra6 from '../assets/images/obras/6.png';
+import obra7 from '../assets/images/obras/7.png';
+
 export type Work = {
   id: string;
   title: string;
   kind: string;
   use: string;
   technique: string;
-  image: string;
+  image: StaticImageData;
   span: "tall" | "wide" | "square";
   featured?: boolean;
 };
@@ -16,7 +25,7 @@ export const works: Work[] = [
     kind: "Ventana circular",
     use: "https://www.instagram.com/p/DaD0OBZnO5M/?img_index=1",
     technique: "Vidrio catedral emplomado",
-    image: "/obras/1.png",
+    image: obra1,
     span: "square",
     featured: true,
   },
@@ -26,7 +35,7 @@ export const works: Work[] = [
     kind: "Horacio Pagani",
     use: "https://www.instagram.com/p/DaD0OBZnO5M/?img_index=1",
     technique: "Vidrio opalescente y catedral",
-    image: "/obras/2.png",
+    image: obra2,
     span: "tall",
     featured: true,
   },
@@ -36,7 +45,7 @@ export const works: Work[] = [
     kind: "Paisaje",
     use: "https://www.instagram.com/p/DaD0OBZnO5M/?img_index=1",
     technique: "Vidrio pintado y emplomado",
-    image: "/obras/3.png",
+    image: obra3,
     span: "wide",
   },
   {
@@ -45,7 +54,7 @@ export const works: Work[] = [
     kind: "Techos",
     use: "https://www.instagram.com/p/DaD0OBZnO5M/?img_index=1",
     technique: "Vidrio catedral emplomado",
-    image: "/obras/4.png",
+    image: obra4,
     span: "tall",
     featured: true,
   },
@@ -55,7 +64,7 @@ export const works: Work[] = [
     kind: "Ventana católicas",
     use: "https://www.instagram.com/p/DaD0OBZnO5M/?img_index=1",
     technique: "Vidrio opal y catedral",
-    image: "/obras/5.png",
+    image: obra5,
     span: "tall",
   },
   {
@@ -64,7 +73,7 @@ export const works: Work[] = [
     kind: "Composición geométrica",
     use: "https://www.instagram.com/p/DaD0OBZnO5M/?img_index=1",
     technique: "Vidrio catedral en plomo",
-    image: "/obras/6.png",
+    image: obra6,
     span: "square",
   },
   {
@@ -73,7 +82,7 @@ export const works: Work[] = [
     kind: "Ventana elevada",
     use: "https://www.instagram.com/p/DaD0OBZnO5M/?img_index=1",
     technique: "Vidrio emplomado sobre madera",
-    image: "/obras/7.png",
+    image: obra7,
     span: "wide",
   },
 ];
