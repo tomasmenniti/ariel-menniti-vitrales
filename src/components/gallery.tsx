@@ -19,9 +19,12 @@ export function Gallery({
   useEffect(() => {
     if (active === null) return;
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "ArrowRight") setActive((i) => (i === null ? i : (i + 1) % items.length));
+      if (e.key === "ArrowRight")
+        setActive((i) => (i === null ? i : (i + 1) % items.length));
       if (e.key === "ArrowLeft")
-        setActive((i) => (i === null ? i : (i - 1 + items.length) % items.length));
+        setActive((i) =>
+          i === null ? i : (i - 1 + items.length) % items.length,
+        );
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
@@ -102,7 +105,9 @@ export function Gallery({
                         aria-label="Anterior"
                         onClick={() =>
                           setActive((i) =>
-                            i === null ? 0 : (i - 1 + items.length) % items.length,
+                            i === null
+                              ? 0
+                              : (i - 1 + items.length) % items.length,
                           )
                         }
                       >
@@ -113,7 +118,9 @@ export function Gallery({
                         className="absolute top-1/2 right-3 inline-flex size-11 -translate-y-1/2 items-center justify-center rounded-md bg-bg/70 text-fg"
                         aria-label="Siguiente"
                         onClick={() =>
-                          setActive((i) => (i === null ? 0 : (i + 1) % items.length))
+                          setActive((i) =>
+                            i === null ? 0 : (i + 1) % items.length,
+                          )
                         }
                       >
                         <ChevronRight className="size-5" />
@@ -126,8 +133,16 @@ export function Gallery({
                     {current.title}
                   </Dialog.Title>
                   <Dialog.Description className="mt-1 text-sm text-muted">
-                    {current.kind} · {current.technique} · {current.use}
+                    {current.kind} · {current.technique}
                   </Dialog.Description>
+                  <a
+                    href={current.use}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-2 inline-block text-sm text-blue-600 underline decoration-blue-600/40 underline-offset-2 transition-colors hover:text-blue-800"
+                  >
+                    {current.use}
+                  </a>
                 </div>
               </>
             ) : null}

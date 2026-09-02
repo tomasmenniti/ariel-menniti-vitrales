@@ -5,10 +5,15 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: `${site.name} · ${site.kicker}`,
+    default: `${site.name} ${site.kicker}`,
     template: `%s · ${site.name}`,
   },
   description: copy.home.intro,
+  icons: {
+    icon: '/icon.jpg',
+    shortcut: '/icon.jpg',
+    apple: '/icon.jpg',
+  },
 };
 
 export default function RootLayout({

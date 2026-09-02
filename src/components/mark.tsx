@@ -17,9 +17,9 @@ export function Mark({ className }: { className?: string }) {
       <g
         fill="none"
         stroke="#fff"
-        stroke-width="7"
-        stroke-linecap="square"
-        stroke-linejoin="miter"
+        strokeWidth={7}
+        strokeLinecap="square"
+        strokeLinejoin="miter"
       >
         <line x1="44" y1="949" x2="424" y2="13" />
         <line x1="424" y1="13" x2="695" y2="548" />

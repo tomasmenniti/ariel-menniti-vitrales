@@ -5,7 +5,7 @@
  */
 export const site = {
   name: "Ariel Menniti",
-  kicker: "Vitrales artesanales",
+  kicker: "Vitrales",
   artist: "Ariel Menniti",
   email: "ariel_menniti@hotmail.com",
   whatsapp: "5491144120867",
@@ -47,8 +47,8 @@ export const copy = {
   },
   obras: {
     kicker: "Galería",
-    title: "Obras y lenguajes.",
-    body: "Rosetones, paneles florales, paisajes, geometría y puertas. Cada encargo se dibuja para el vano y la luz de ese lugar — estas piezas muestran el registro del taller.",
+    title: "Algunas de mis obras",
+    body: "Rosetones, puertas, ventanas y techos. Cada encargo se fabrica con amor al arte. Estas piezas muestran el registro del taller.",
   },
   oficio: {
     kicker: "El oficio",

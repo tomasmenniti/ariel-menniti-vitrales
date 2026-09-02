@@ -4,11 +4,11 @@
  */
 
 import { useEffect } from "react";
-import { useRouter } from "next/link";
 import {
   collectRoutePathsFromTree,
   installPreviewHostBridge,
 } from "@/lib/preview-host-bridge";
+import { useRouter } from "next/router";
 
 export function PreviewHostBridge() {
   const router = useRouter();
@@ -16,9 +16,9 @@ export function PreviewHostBridge() {
   useEffect(() => {
     return installPreviewHostBridge({
       navigate: (path) => {
-        router.history.push(path);
+        router.push(path);
       },
-      getRoutePaths: () => collectRoutePathsFromTree(router.routeTree),
+      getRoutePaths: () => collectRoutePathsFromTree(router.route),
     });
   }, [router]);
 
