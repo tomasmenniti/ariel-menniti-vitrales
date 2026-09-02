@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Taller de Luz">
-  <rect width="32" height="32" rx="6" fill="#14110e"/>
-  <path d="M16 3.6 28.4 16 16 28.4 3.6 16 Z" fill="#f3ebe0" stroke="#b85c38" stroke-width="2" stroke-linejoin="round"/>
-  <path d="M16 3.6 V28.4 M3.6 16 H28.4" stroke="#b85c38" stroke-width="2"/>
-  <path d="M16 10.2 21.8 16 16 21.8 10.2 16 Z" fill="#8b3a3a"/>
-</svg>
