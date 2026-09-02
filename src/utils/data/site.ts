@@ -1,4 +1,4 @@
-import portrait from '../../assets/ariel.jpg';
+import portrait from '../../assets/images/ariel.jpg';
 import obra8 from '../../assets/images/obras/8.png';
 
 export const site = {

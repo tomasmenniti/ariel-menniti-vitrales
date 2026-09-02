@@ -9,11 +9,13 @@ import { nav, site } from "@/utils/data/site";
 import { cn } from "../utils/functions";
 import { Mark } from "@/components/mark";
 import { Button } from "@/components/ui/button";
+import { useRouter } from "next/router";
 
 export function SiteHeader() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -47,12 +49,13 @@ export function SiteHeader() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex" aria-label="Principal">
+        <nav
+          className="hidden items-center gap-8 md:flex"
+          aria-label="Principal"
+        >
           {nav.map((item) => {
             const active =
-              item.to === "/"
-                ? pathname === "/"
-                : pathname.startsWith(item.to);
+              item.to === "/" ? pathname === "/" : pathname.startsWith(item.to);
             return (
               <Link
                 key={item.to}
@@ -66,7 +69,7 @@ export function SiteHeader() {
               </Link>
             );
           })}
-          <Button asChild size="sm">
+          <Button asChild variant="outline">
             <Link href="/encargos">Encargar</Link>
           </Button>
         </nav>
@@ -114,7 +117,7 @@ export function SiteHeader() {
                   </Link>
                 ))}
               </nav>
-              <Button asChild className="mt-8" size="lg">
+              <Button asChild variant="outline">
                 <Link href="/encargos">Encargar una pieza</Link>
               </Button>
             </Dialog.Content>

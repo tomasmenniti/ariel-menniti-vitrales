@@ -7,9 +7,11 @@ import { copy, site } from "@/utils/data/site";
 import { processSteps, works } from "@/utils/data/works";
 import styles from "./styles.module.css"; // ajusta la ruta si hace falta
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 export default function Home() {
   const home = copy.home;
+  const router = useRouter();
 
   return (
     <main>
@@ -29,13 +31,10 @@ export default function Home() {
             <p className={styles.intro}>{home.intro}</p>
             <ContactLinks size="lg" className={styles.contactLinks} />
             <div className={styles.ctaButtons}>
-              <Button asChild variant="outline" size="lg">
-                <Link href="/obras">
-                  {home.ctaWorks}
-                  <ArrowRight className="size-4" />
-                </Link>
+              <Button asChild variant="outline">
+                <Link href="/obras">{home.ctaWorks}</Link>
               </Button>
-              <Button asChild variant="ghost" size="lg">
+              <Button asChild variant="outline">
                 <Link href="/encargos">{home.ctaCommission}</Link>
               </Button>
             </div>
@@ -50,11 +49,9 @@ export default function Home() {
               <p className={styles.kickerSubtle}>{home.galleryKicker}</p>
               <h2 className={styles.galleryTitle}>{home.galleryTitle}</h2>
             </div>
+
             <Button asChild variant="outline">
-              <Link href="/obras">
-                {home.galleryCta}
-                <ArrowRight className="size-4" />
-              </Link>
+              <Link href="/obras">{home.galleryCta}</Link>
             </Button>
           </div>
           <Gallery works={works} featuredOnly />
@@ -74,11 +71,8 @@ export default function Home() {
           ))}
         </ol>
         <div className={styles.processLinkWrap}>
-          <Button asChild variant="link" className={styles.processLinkButton}>
-            <Link href="/tienda">
-              {home.processLink}
-              <ArrowRight className="size-4" />
-            </Link>
+          <Button asChild variant="outline">
+            <Link href="/tienda">{home.processLink}</Link>
           </Button>
         </div>
       </section>
@@ -97,7 +91,7 @@ export default function Home() {
             <h2 className={styles.ctaTitle}>{home.ctaTitle}</h2>
             <p className={styles.ctaBody}>{home.ctaBody}</p>
             <div className={styles.ctaActions}>
-              <Button asChild size="lg">
+              <Button asChild variant="outline">
                 <Link href="/encargos">{home.ctaButton}</Link>
               </Button>
               <ContactLinks size="md" />

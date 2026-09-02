@@ -6,12 +6,14 @@ import { StoreGallery } from "../../components/Tienda/Tienda";
 import { copy } from "@/utils/data/site";
 import { processSteps } from "@/utils/data/works";
 import styles from "./styles.module.css";
+import { useRouter } from "next/router";
 
 export const metadata: Metadata = {
   title: "Tienda",
 };
 
 export default function TiendaPage() {
+  const router = useRouter();
   const page = copy.tienda;
 
   return (
@@ -44,8 +46,7 @@ export default function TiendaPage() {
             </li>
           ))}
         </ol>
-
-        <Button asChild className={styles.pathCta} size="lg">
+        <Button asChild variant="outline">
           <Link href="/encargos">{page.pathCta}</Link>
         </Button>
       </section>

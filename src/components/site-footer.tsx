@@ -3,6 +3,7 @@ import { ContactLinks } from "@/components/contact-links";
 import { LeadLine } from "@/components/lead-line";
 import { Mark } from "@/components/mark";
 import { copy, nav, site } from "@/utils/data/site";
+import { Button } from "./ui/button";
 
 export function SiteFooter() {
   return (
@@ -26,9 +27,9 @@ export function SiteFooter() {
           <ul className="mt-4 space-y-2 text-sm text-muted">
             {nav.map((item) => (
               <li key={item.to}>
-                <Link href={item.to} className="hover:text-fg">
-                  {item.label}
-                </Link>
+                <Button asChild variant="outline">
+                  <Link href={item.to}>{item.label}</Link>
+                </Button>
               </li>
             ))}
           </ul>
