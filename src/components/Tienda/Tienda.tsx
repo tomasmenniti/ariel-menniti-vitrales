@@ -1,7 +1,7 @@
 "use client";
 
-import taller1 from '../assets/images/taller/t1.png';
-import taller2 from '../assets/images/taller/t2.png';
+import taller1 from '../../assets/images/taller/t1.png';
+import taller2 from '../../assets/images/taller/t2.png';
 
 import { useEffect, useState } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
